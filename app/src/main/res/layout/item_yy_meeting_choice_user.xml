@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_meeting_user_choice"
+    android:layout_width="100dp"
+    android:layout_height="110dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <CheckBox
+        android:id="@+id/user_choice"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+       />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@mipmap/meeting_choice_user_head"
+        />
+    <TextView
+        android:id="@+id/choice_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="孙正义"/>
+</LinearLayout>

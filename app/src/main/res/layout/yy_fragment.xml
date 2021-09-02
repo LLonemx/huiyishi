@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F6F2F2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="horizontal">
+            <EditText
+                android:id="@+id/start_time"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:inputType="date"
+                android:hint="开始时间"
+                android:layout_marginLeft="@dimen/dimen_16"
+                android:layout_alignParentLeft="true" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:gravity="center_vertical"
+                   android:text="——"
+                   />
+            <EditText
+                android:id="@+id/end_time"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:inputType="date"
+                android:hint="结束时间"
+                android:layout_marginLeft="@dimen/dimen_16"
+                android:layout_alignParentLeft="true" />
+    </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorDivider"
+                android:layout_marginRight="@dimen/dimen_16" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="预计人数"
+            android:inputType="number"
+            android:singleLine="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dimen_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:text="人"
+            android:textAlignment="viewEnd"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="36dp"
+            android:gravity="end" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorDivider" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/yy_meeting_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="会议名称"
+            android:singleLine="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dimen_16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorDivider" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/room_choice"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/yy_room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:text="请选择会议室"
+            android:singleLine="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dimen_16" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorDivider" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/choice_user"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/yy_meeting_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:singleLine="true"
+                android:text="选择参会人员" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Choice_user_rec"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+            <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorDivider" />
+
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <EditText
+        android:id="@+id/yy_meeting_description"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:minLines="5"
+        android:gravity="top"
+        android:hint="会议公告"
+        />
+</LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:enabled="true"
+        app:cornerRadius="40dp"
+        app:backgroundTint="@color/black"
+        app:rippleColor="#C36B87"
+        android:text="预约提交" />
+
+
+
+    </LinearLayout>

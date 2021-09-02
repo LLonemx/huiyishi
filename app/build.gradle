@@ -1,0 +1,63 @@
+plugins {
+    id 'com.android.application'
+
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.example.huiyishi"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+
+    //ButterKnife框架支持
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.github.satyan:sugar:1.5'
+    //配置retrofit2.0
+    implementation 'com.squareup.retrofit2:retrofit:+'
+    implementation 'com.squareup.retrofit2:converter-gson:+'
+    //Rxjava2需要依赖
+    implementation 'io.reactivex.rxjava2:rxjava:+'
+    implementation 'io.reactivex.rxjava2:rxandroid:+'
+
+    //让retrofit支持Rxjava2
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:+'
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.0'
+
+    implementation 'com.google.android.material:material:1.0.0-rc01'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

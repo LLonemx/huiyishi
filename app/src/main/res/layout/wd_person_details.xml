@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F1F1F1">
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/wd_person_details_rec"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/wd_person_details_fh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        app:cornerRadius="40dp"
+        app:backgroundTint="@color/black"
+        app:rippleColor="#C36B87"
+        android:text="返回"
+        />
+</LinearLayout>

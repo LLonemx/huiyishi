@@ -1,0 +1,5 @@
+# huiyishi
+基于android开发的会议室预约与管理系统客户端
+本客户端使用了如下框架
+网络通信框架为Rxjava+Retrofit完成异步网络请求
+Sqlite框架Sugar用于存储网络请求获得的数据
